@@ -1,0 +1,86 @@
+/*WIP*/
+::placeholder {color: #000000;}
+:root {--brand-text-01: #F8F7F6; --neutral-06: #F8F7F6; --brand-primary: #D4D0C8; --brand-secondary: #A69E8A;}
+.settingsWrapper .defaults-hint {background: #7F7B73;} /*WHY use anticheat-denied here?*/
+.selectFieldWrapper select>option, .realtimeDownloadStat, .downLabel, .diskLabel  {color: #F8F7F6;}
+.libraryHeader {margin: 0; }
+.hiddenCheckbox:checked+.toggleSwitchWrapper:before {color: #D4D0C8;}
+.downIcon circle {fill: #A69E8A;}
+.Header, .libraryHeader { background: var(--libtitlebars); }
+.Header__search .SearchBar { filter: drop-shadow(2px 2px 3px #32302F);}
+.gameConfigContainer .titleWrapper {background: var(--game-title); padding-top: 0;}
+.libraryTitle {margin: var(--space-3xs) 0;}
+.gameCard>.gameCardStatus, .gameCard.notAvailable { text-align: right; color: #F8F7F6;}
+.settingsIcon path {fill: var(--thumbbuttoncolor);}
+.updateIcon svg { color: var(--thumbbuttoncolor);}
+.selectFieldWrapper select, .textInputFieldWrapper .inputIcon, .textInputFieldWrapper input[type=text] { color: var(--fields-text-color);}
+.goToLibrary, .settingsWrapper .button, .button.outline, .toolsWrapper .drag>span, .button.is-text, .button.is-success {background: var(--button); border: 0px; color: #F8F7F6;}
+.dmItemList {background: var(--dlgradient); filter: drop-shadow(2px 2px 3px #32302F); border: solid 1px #32302F;}
+.contextMenu>.MuiPaper-root>.MuiMenu-list {color: #F8F7F6;}
+.autoComplete {color:#F8F7F6 ;}
+.tableFieldWrapper tbody tr:nth-child(even), .tableFieldWrapper tbody tr:nth-child(even) span::-webkit-scrollbar {color:#F8F7F6;}
+.Dialog__element[open] {border: solid #32302F 3px;filter: drop-shadow(2px 4px 6px black);}
+
+
+
+
+body.Beige {
+    --accent: #32302F;
+    --input-background: #7F7B73;
+    --primary: #32302F;
+    --primary-hover: red;
+    --body-background: #D4D0C8;
+    --icon-disabled: #7F7B73;
+
+    --danger: #32302F;
+    --fields-text-color: #F8F7F6;
+    --button: #32302F;
+    --status-warning: #32302F;
+    --accent-overlay: #A69E8A;
+    
+    --search-bar-border: #32302F;
+    --search-bar-background: linear-gradient( 180deg, #BEBAB3 32px, #BEBAB3 32px, #32302F 450%);
+    --button-stroke: #32302F;
+    --text-tertiary: #F8F7F6;
+    --success: #A69E8A;
+    --success-hover:  #D4D0C8;
+    --libtitlebars: linear-gradient(90deg, #32302F -2px, #A69E8A 16px, #BEBAB3 100%);
+    --action-icon: #7F7B73;
+    --action-icon-hover: #32302F;
+    --action-icon-active: #32302F;
+    --thumbbuttoncolor: #F8F7F6;
+    --status-text: #F8F7F6;
+    --gamecard-title-color:  #D4D0C8;
+    --icons-background: linear-gradient( 90deg, #7F7B73 32px, #6B6861 66% 8px, #7F7B73 100%);
+
+    --game-title: linear-gradient(90deg, #F8F7F666 1%, #BEBAB3 300px);
+    --tertiary-button: #A69E8A;
+    --status-warning-hover: #A69E8A;
+    --background-darker: #BEBAB3;
+    --anticheat-denied: #FF0000;
+    --anticheat-broken: #FFAA00;
+    --anticheat-running: #BDE51A;
+    --anticheat-supported: #6BE51A;
+    --anticheat-planned: #8f3f71;
+    --text-secondary: #32302F;
+    
+    --install-button: #A69E8A;
+    --dlgradient: linear-gradient(135deg, rgba(193,188,180,1) 0%, rgba(127,123,115,1) 79%, rgba(96,89,84,1) 100%);
+    --dlborder: linear-gradient(180deg, rgba(193,188,180,1) 0%, rgba(127,123,115,1) 79%, rgba(96,89,84,1) 100%);
+    
+    --navbar-background: #7F7B73;
+    --navbar-active-background: #32302F;
+    --navbar-inactive: #F8F7F6;
+    --navbar-active: #F8F7F6;
+    --text-hover: #32302F;
+    --navbar-accent: #F8F7F6;
+    --text-default: #32302F;
+    --divider: #32302F;
+    --current-background: #D4D0C8;
+    --gradient-body-background: linear-gradient( 90deg, #32302F -2px, #D4D0C8 16px, #BEBAB3 100%);
+    --modal-backdrop: rgba(0, 0, 0, 0.15);
+    --modal-background: linear-gradient(180deg, #D4D0C8 -32px, #BEBAB3 64px, #A9A59D 100%);
+    --modal-border: #7F7B73;
+    --cancel-button:#A69E8A;
+    --cancel-button-overlay: #D4D0C8;
+}
