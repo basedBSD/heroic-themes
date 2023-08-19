@@ -4,53 +4,63 @@
 /*---tryina fix cloud unsupported red text------------------*/
 .gameInfo .infoWrapper .iconWithText {color:#32302F !important;}
 /*---i dont like the 0deg gradient on game covers in game pages so making it a corner*/
-.gamePicture:after {linear-gradient(var(--gradient-angle),rgba(0,0,0,0),var(--background-darker) 100%),linear-gradient(320deg,rgba(0,0,0,0) 89%,var(--background-darker) 100%)}
+.gamePicture:after {background: linear-gradient(var(--gradient-angle),rgba(0,0,0,0),var(--background-darker) 100%),linear-gradient(320deg,rgba(0,0,0,0) 88%,var(--background-darker) 93%)}
 /*---unavailable/broken games now look like unsupported ones*/
 .gameCard.notAvailable .gameImg.installed {filter: grayscale(var(--installing-effect)); color: #F8F7F6;}
-/*---used to make placeholder text different color, idk how else.
- *FIXME seems to affect both search & other textboxes, those are 2 different colored backgrounds*/
-::placeholder {color: #000000;}
-/*sidemenu category selection doesnt have background, idk why, added it tho*/
+/*---used to make placeholder text different color, idk how else.*/
+.SearchBar .searchBarInput::placeholder {color: #000000;}
+/*---every other placeholder text*/
+::placeholder {color: #F8F7F6;}
+/*---sidemenu category selection doesnt have background, idk why, added it tho*/
 .Sidebar__item.active{background: #32302F;}
 /*---making the logo look better on the theme*/
 .Sidebar .heroicIcon {filter: sepia(1);}
-/*changing game page topright menu text color, this also disables hover effect*/
+/*---changing game page topright menu text color, this also disables hover effect*/
 .goToLibrary, .button.outline, .toolsWrapper .drag>span, .button.is-text, .button.is-success {background: var(--button); border: 0px; color: #F8F7F6 !important;}
-/*fixing OTHER kind of button*/
+/*---fixing OTHER kind of buttons*/
 .settingsWrapper .button {background: var(--status-warning); color: var(--text-tertiary)}
-/*fixing the download circle color (it uses accent)*/
+/*---fixing the download circle color (it uses accent)*/
 .downIcon circle {fill: #A69E8A;}
-/*fixing the RMB menu text color from library page*/
+/*---fixing the RMB menu text color from library page*/
 .contextMenu>.MuiPaper-root>.MuiMenu-list {color: #F8F7F6;}
-/*lets use different effect for libheader, and also add it to the top header*/
+/*---lets use different effect for libheader, and aplaylso add it to the top header*/
 .Header, .libraryHeader { background: var(--libtitlebars); }
-/*and remove the empty space between them*/
+/*---and remove the empty space between them*/
 .libraryHeader {margin: 0; }
-/*gotta fix the text in lib search autocomplete box*/
+/*---gotta fix the text in lib search autocomplete box*/
 .autoComplete {color:#F8F7F6 ;}
-/*Didn't like the Global Settings warning box being red, clashes too much*/
+/*---Didn't like the Global Settings warning box being red, clashes too much*/
 .settingsWrapper .defaults-hint {background: #7F7B73;} /*WHY use anticheat-denied for it?*/
-/*GET OTHER SELECTOR THINGYS TITLED AS WELL VVVVV FIXME*/
-:root {--brand-text-01: #F8F7F6; --neutral-06: #F8F7F6; --brand-primary: #D4D0C8; --brand-secondary: #A69E8A; }
-/*changes checkbox check's color, not important but looks nicer this way*/
+/*---changes checkbox check's color, not important but looks nicer this way*/
 .hiddenCheckbox:checked+.toggleSwitchWrapper:before {color: #D4D0C8;}
-/*adds background gradient to game title in game page*/
+/*---adds background gradient to game title in game page*/
 .gameConfigContainer .titleWrapper {background: var(--game-title); padding-top: 0;}
-/*adds border to dialog boxes*/
+/*---adds border to dialog boxes*/
 .Dialog__element[open] {border: solid #32302F 3px;filter: drop-shadow(2px 4px 6px black);}
-/*adds border to search bar*/
+/*---adds border to search bar*/
 .Header__search .SearchBar { filter: drop-shadow(2px 2px 3px #32302F);}
+/*---making game number text color in library WHITE*/
+.numberOfgames {color: #F8F7F6;}
+/*---I dont want this the same color as accent-verlay*/
+.downIcon:hover circle {fill: #F8F7F6;}
+/*---I wish I knew how to trigger an error to see if this works proper*/
+.errorDialog.error-box (color: #F8F7F6;)
+/*---fixing the dl page pause button, cause idk how to change it other way*/
+.svg-button circle#circle2 {fill: #A69E8A;}
+/*WHY would game titles in dl have color connected to play buttons from library*/
+.downloadManagerTitleList>.titleSize {color:#32302F;}
+/*GET OTHER SELECTOR THINGYS TITLED AS WELL VVVVV FIXME*/
 
+:root {--brand-text-01: #F8F7F6; --neutral-06: #F8F7F6; --brand-primary: #D4D0C8; --brand-secondary: #A69E8A; }
 .selectFieldWrapper select>option, .realtimeDownloadStat, .downLabel, .diskLabel  {color: #F8F7F6;}
 .libraryTitle {margin: var(--space-3xs) 0;}
 .gameCard>.gameCardStatus, .gameCard.notAvailable { text-align: right; color: #F8F7F6;}
 .settingsIcon path {fill: var(--thumbbuttoncolor);}
 .updateIcon svg { color: var(--thumbbuttoncolor);}
 .selectFieldWrapper select, .textInputFieldWrapper .inputIcon, .textInputFieldWrapper input[type=text] { color: var(--fields-text-color);}
-.dmItemList {background: var(--dlgradient); filter: drop-shadow(2px 2px 3px #32302F); border: solid 1px #32302F;}
+.dmItemList {background: linear-gradient(135deg, #C1BCB4 0%, #918c83 79%, #605954 100%); filter: drop-shadow(2px 2px 3px #32302F); border: solid 1px #32302F;}
 .tableFieldWrapper tbody tr:nth-child(even), .tableFieldWrapper tbody tr:nth-child(even) span::-webkit-scrollbar {color:#F8F7F6;}
 
-.numberOfgames {color: #F8F7F6;}
 
 body.Beige {
     /*SOME of the buttons' text color*/
@@ -65,7 +75,9 @@ body.Beige {
     --text-quartenary: red;
     /*-------------------------------------------*/
 /*COLORS USES: white: #F8F7F6 / black: #32302F / def color: #D4D0C8*/
+    /*changed back button from game page color, changes some link colors, changes ADD GAME button background,changes checkbox color, some option title text colors,*/
     --accent: #32302F;
+
     --input-background: #7F7B73;
     --primary: #32302F;
 
@@ -77,9 +89,11 @@ body.Beige {
         --danger: #32302F;
     --fields-text-color: #F8F7F6;
     --button: #32302F;
-/*This changes hovering on buttons color, BUTH ON BUTTONS AND CIRRCLE BUTTONS*/    --buttonmouse: #32302F;
+/*This changes hovering on buttons color*/
+    --accent-overlay: #32302F;
+
     --status-warning: #32302F;
-    --accent-overlay: var(--buttonmouse);
+
     /*Library stuff*/
 /*selected search bar border color & background*/
     --search-bar-border: #32302F;
@@ -111,11 +125,8 @@ body.Beige {
     --anticheat-planned: #8f3f71;
     --text-secondary: #32302F;
     /*Download page stuff*/
-        --danger-hover: #D4D0C8;
-
+    --danger-hover: #D4D0C8;
     --install-button: #A69E8A;
-    --dlgradient: linear-gradient(135deg, #C1BCB4 0%, #7F7B73 79%, #605954 100%);
-    --dlborder: linear-gradient(180deg, ##C1BCB4 0%, #7F7B73 79%, #605954 100%);
     /*Menu stuff*/
     /*side menu background*/
     --navbar-background: #7F7B73;
@@ -141,6 +152,7 @@ body.Beige {
 
 
     /*button in downloads*/
+    --install-button-hover:#F8F7F6;
     --cancel-button:#A69E8A;
     --cancel-button-overlay: #D4D0C8;
     /*I feel like this is used only for the INSTALL button in EOS Overlay part of the Advanced caterogy in Settings*/
