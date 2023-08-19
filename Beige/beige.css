@@ -1,58 +1,100 @@
 /*WIP*/
+/*Dear god this code is a mess. I started leaving those notes for my own sanity, sorry guys. love ya*/
+/*---making dl bar's background darker*/
+.css-7p5u54 {background-color: #32302F;}
+/*---tryina fix cloud unsupported red text------------------*/
+.gameInfo .infoWrapper .iconWithText {color:#32302F !important;}
+/*---i dont like the 0deg gradient on game covers in game pages so making it a corner*/
+.gamePicture:after {linear-gradient(var(--gradient-angle),rgba(0,0,0,0),var(--background-darker) 100%),linear-gradient(320deg,rgba(0,0,0,0) 89%,var(--background-darker) 100%)}
+/*---unavailable/broken games now look like unsupported ones*/
+.gameCard.notAvailable .gameImg.installed {filter: grayscale(var(--installing-effect)); color: #F8F7F6;}
+/*---used to make placeholder text different color, idk how else.
+ *FIXME seems to affect both search & other textboxes, those are 2 different colored backgrounds*/
 ::placeholder {color: #000000;}
-:root {--brand-text-01: #F8F7F6; --neutral-06: #F8F7F6; --brand-primary: #D4D0C8; --brand-secondary: #A69E8A;}
-.settingsWrapper .defaults-hint {background: #7F7B73;} /*WHY use anticheat-denied here?*/
-.selectFieldWrapper select>option, .realtimeDownloadStat, .downLabel, .diskLabel  {color: #F8F7F6;}
-.libraryHeader {margin: 0; }
-.hiddenCheckbox:checked+.toggleSwitchWrapper:before {color: #D4D0C8;}
+/*---making the logo look better on the theme*/
+.Sidebar .heroicIcon {    filter: sepia(1);}
+/*changing game library topright menu text color, this also disables hover effect
+ But it broke SOME (FIXME) buttons from Settings, beacuse WHY wouldn't it*/
+.goToLibrary, .settingsWrapper .button, .button.outline, .toolsWrapper .drag>span, .button.is-text, .button.is-success {background: var(--button); border: 0px; color: #F8F7F6 !important;}
+/*fixing the download circle color (it uses accent)*/
 .downIcon circle {fill: #A69E8A;}
+/*fixing the RMB menu text color from library page*/
+.contextMenu>.MuiPaper-root>.MuiMenu-list {color: #F8F7F6;}
+/*lets use different effect for libheader, and also add it to the top header*/
 .Header, .libraryHeader { background: var(--libtitlebars); }
+/*and remove the empty space between them*/
+.libraryHeader {margin: 0; }
+/*gotta fix the text in lib search autocomplete box*/
+.autoComplete {color:#F8F7F6 ;}
+/*Didn't like the Global Settings warning box being red, clashes too much*/
+.settingsWrapper .defaults-hint {background: #7F7B73;} /*WHY use anticheat-denied for it?*/
+/*GET OTHER SELECTOR THINGYS TITLED AS WELL VVVVV FIXME*/
+:root {--brand-text-01: #F8F7F6; --neutral-06: #F8F7F6; --brand-primary: #D4D0C8; --brand-secondary: #A69E8A; }
 .Header__search .SearchBar { filter: drop-shadow(2px 2px 3px #32302F);}
+
+.selectFieldWrapper select>option, .realtimeDownloadStat, .downLabel, .diskLabel  {color: #F8F7F6;}
+.hiddenCheckbox:checked+.toggleSwitchWrapper:before {color: #D4D0C8;}
 .gameConfigContainer .titleWrapper {background: var(--game-title); padding-top: 0;}
 .libraryTitle {margin: var(--space-3xs) 0;}
 .gameCard>.gameCardStatus, .gameCard.notAvailable { text-align: right; color: #F8F7F6;}
 .settingsIcon path {fill: var(--thumbbuttoncolor);}
 .updateIcon svg { color: var(--thumbbuttoncolor);}
 .selectFieldWrapper select, .textInputFieldWrapper .inputIcon, .textInputFieldWrapper input[type=text] { color: var(--fields-text-color);}
-.goToLibrary, .settingsWrapper .button, .button.outline, .toolsWrapper .drag>span, .button.is-text, .button.is-success {background: var(--button); border: 0px; color: #F8F7F6;}
 .dmItemList {background: var(--dlgradient); filter: drop-shadow(2px 2px 3px #32302F); border: solid 1px #32302F;}
-.contextMenu>.MuiPaper-root>.MuiMenu-list {color: #F8F7F6;}
-.autoComplete {color:#F8F7F6 ;}
+
 .tableFieldWrapper tbody tr:nth-child(even), .tableFieldWrapper tbody tr:nth-child(even) span::-webkit-scrollbar {color:#F8F7F6;}
 .Dialog__element[open] {border: solid #32302F 3px;filter: drop-shadow(2px 4px 6px black);}
-
-
-
+.numberOfgames {color: #F8F7F6;}
 
 body.Beige {
+    /*CHECK IF THIS BREAKS ANYTHING FIXME
+     watch out of pink colored backgorunds, this is neexed to 'back to top' button in library
+     Also affects HLTB/score/etc stats from game pages
+     It also changes the searchbox's selected item text color. WHY*/
+    --background: pink;
+    /*find out what these do lmao*/
+        --download-button: pink;
+    --download-button-overlay: pink;
+    --text-title: pink;
+    --play-button: red;
+    --text-quartenary: red;
+    /*-------------------------------------------*/
+/*COLORS USES: white: #F8F7F6 / black: #32302F / def color: #D4D0C8*/
     --accent: #32302F;
     --input-background: #7F7B73;
     --primary: #32302F;
     --primary-hover: red;
     --body-background: #D4D0C8;
+    /*browser only?*/
     --icon-disabled: #7F7B73;
 
-    --danger: #32302F;
+    /*QOL MISC*/
+        --danger: #32302F;
     --fields-text-color: #F8F7F6;
     --button: #32302F;
+/*This changes hovering on buttons color, BUTH ON BUTTONS AND CIRRCLE BUTTONS*/    --buttonmouse: #32302F;
     --status-warning: #32302F;
-    --accent-overlay: #A69E8A;
-    
+    --accent-overlay: var(--buttonmouse);
+    /*LIBRARYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY*/
+
     --search-bar-border: #32302F;
     --search-bar-background: linear-gradient( 180deg, #BEBAB3 32px, #BEBAB3 32px, #32302F 450%);
     --button-stroke: #32302F;
     --text-tertiary: #F8F7F6;
+    /*play button*/
     --success: #A69E8A;
     --success-hover:  #D4D0C8;
+    /*lib top buttons*/
     --libtitlebars: linear-gradient(90deg, #32302F -2px, #A69E8A 16px, #BEBAB3 100%);
     --action-icon: #7F7B73;
     --action-icon-hover: #32302F;
     --action-icon-active: #32302F;
+    /*lib thumbnails*/
     --thumbbuttoncolor: #F8F7F6;
     --status-text: #F8F7F6;
     --gamecard-title-color:  #D4D0C8;
     --icons-background: linear-gradient( 90deg, #7F7B73 32px, #6B6861 66% 8px, #7F7B73 100%);
-
+    /*GAME PAGEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE*/
     --game-title: linear-gradient(90deg, #F8F7F666 1%, #BEBAB3 300px);
     --tertiary-button: #A69E8A;
     --status-warning-hover: #A69E8A;
@@ -63,11 +105,13 @@ body.Beige {
     --anticheat-supported: #6BE51A;
     --anticheat-planned: #8f3f71;
     --text-secondary: #32302F;
-    
+    /*DOOOOOOOOOOOOOOOOOOOOOOOOOOOOOWNLOOOOOOOO*/
+        --danger-hover: #D4D0C8;
+
     --install-button: #A69E8A;
-    --dlgradient: linear-gradient(135deg, rgba(193,188,180,1) 0%, rgba(127,123,115,1) 79%, rgba(96,89,84,1) 100%);
-    --dlborder: linear-gradient(180deg, rgba(193,188,180,1) 0%, rgba(127,123,115,1) 79%, rgba(96,89,84,1) 100%);
-    
+    --dlgradient: linear-gradient(135deg, #C1BCB4 0%, #7F7B73 79%, #605954 100%);
+    --dlborder: linear-gradient(180deg, ##C1BCB4 0%, #7F7B73 79%, #605954 100%);
+    /*MENUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU*/
     --navbar-background: #7F7B73;
     --navbar-active-background: #32302F;
     --navbar-inactive: #F8F7F6;
@@ -76,11 +120,17 @@ body.Beige {
     --navbar-accent: #F8F7F6;
     --text-default: #32302F;
     --divider: #32302F;
+    /*main background*/
     --current-background: #D4D0C8;
     --gradient-body-background: linear-gradient( 90deg, #32302F -2px, #D4D0C8 16px, #BEBAB3 100%);
+
+
     --modal-backdrop: rgba(0, 0, 0, 0.15);
     --modal-background: linear-gradient(180deg, #D4D0C8 -32px, #BEBAB3 64px, #A9A59D 100%);
     --modal-border: #7F7B73;
+
+
+    /*button in downloads*/
     --cancel-button:#A69E8A;
     --cancel-button-overlay: #D4D0C8;
 }
